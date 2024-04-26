@@ -2,6 +2,13 @@ import { expect, test } from "bun:test";
 
 expect.extend({
     toCustomEqual(actual, expected) {
+
+        console.log({
+            actual,
+            expected,
+            pass: this.equals(actual, expected)
+        })
+
         return {
             pass: this.equals(actual, expected),
         }
